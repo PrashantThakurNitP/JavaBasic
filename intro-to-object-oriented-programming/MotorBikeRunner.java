@@ -1,15 +1,19 @@
 
-
 public class MotorBikeRunner {
 
     public static void main(String[] args) {
-        MotorBike duaiti = new MotorBike();
+        MotorBike ducaiti = new MotorBike();
         MotorBike honda = new MotorBike();
+        ducaiti.setBikeName("Ducaiti");
+        honda.setBikeName("Ducaiti");
         honda.setSpeed(80);
-        duaiti.setSpeed(100);
-        duaiti.start();
+        ducaiti.setSpeed(100);
+        ducaiti.start();
+        System.out.println("Speed of " + ducaiti.getBikeName() + " is " + ducaiti.getSpeed());
+
         honda.start();
-        
+        System.out.println("Speed of " + honda.getBikeName() + " is " + honda.getSpeed());
+
     }
 
 }
