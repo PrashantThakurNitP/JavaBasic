@@ -3,7 +3,9 @@ public class Book {
     private int noOfCopies;
 
     void setNoOfCopies(int noOfCopies) {
-        this.noOfCopies = noOfCopies;
+        if (noOfCopies > 0)// benefit of encapsulation -> prevent bad code from other classes fro putting
+                           // bad data in our object
+            this.noOfCopies = noOfCopies;
     }
 
     int getNoOfCopies() {

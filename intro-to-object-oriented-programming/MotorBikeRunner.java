@@ -14,6 +14,13 @@ public class MotorBikeRunner {
         honda.start();
         System.out.println("Speed of " + honda.getBikeName() + " is " + honda.getSpeed());
 
+        ducaiti.increaseSpeed(100);
+        honda.increaseSpeed(100);
+        System.out.println("Speed of " + ducaiti.getBikeName() + " is " + ducaiti.getSpeed());
+
+        honda.start();
+        System.out.println("Speed of " + honda.getBikeName() + " is " + honda.getSpeed());
+
     }
 
 }
