@@ -35,7 +35,7 @@ public class MotorBike {
     public void setSpeed(int speed) {
         // speed is local variable which comes as arg
         if (speed > 0)
-            this.speed = speed;
+            this.speed = speed; // vaidation at one place
     }
 
     public int getSpeed() {
@@ -47,8 +47,13 @@ public class MotorBike {
     }
 
     public void increaseSpeed(int howMuch) { // increase speed encapsuation
-        if (howMuch > 0)
-            this.speed += howMuch;
+
+        setSpeed(this.speed + howMuch);
+    }
+
+    public void decreaseSpeed(int howMuch) { // increase speed encapsuation
+
+        setSpeed(this.speed - howMuch);
     }
 
     void start() {
