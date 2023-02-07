@@ -1,6 +1,11 @@
 
 public class MotorBike {
-    // state
+    /*
+     * state -> value of member variable at that point of time. it an changes
+     * 
+     * 
+     * through method we expose which are called behaviour of class
+     */
     private String bikeName; // default value of string comes as nul if not defined
 
     private int speed; // member variable default vale of int is 0
@@ -91,8 +96,7 @@ public class MotorBike {
     }
 
     public String toString() {
-        return "Model-> " + getBikeName() + ", Brand ->" + getBikeBrand() + ", Mileage -> " + getMileage()
-                + ", Current Speed ->"
-                + getSpeed();
+        return String.format("%s->%s, %s->%s, %s->%s, %s->%s", "Model", getBikeName(), "Brand", getBikeBrand(),
+                "Mileage", getMileage(), "Current Speed", getSpeed());
     }
 }
