@@ -8,6 +8,17 @@ public class Employee extends Person {
     private char employeeGrade;
     private BigDecimal salary;
 
+    /*
+     * during creation of object of employee first constructor of super class person
+     * is called then constructor of child class employee is called
+     * from constuctor of class in first line constructor of super class is called
+     */
+    Employee(String name, int age, String title) {
+        super(name, age);
+        this.title = title;
+
+    }
+
     public String getTitle() {
         return title;
     }
@@ -44,9 +55,10 @@ public class Employee extends Person {
     @Override
     public String toString() {
 
-        return String.format("Name %s, Age %d,Title %s, Employeer Name %s, Employeer grade %c", super.getName(),
+        return String.format("Name %s, Age %d,Title %s, Employeer Name %s, Employeer grade %c Salary %.3f",
+                super.getName(),
                 getAge(), getTitle(),
-                getEmployerName(), getEmployeeGrade());
+                getEmployerName(), getEmployeeGrade(), getSalary());
     }
 
 }

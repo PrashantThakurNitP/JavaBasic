@@ -1,4 +1,3 @@
-package oops2;
 
 public class Student extends Person {
 
@@ -24,6 +23,12 @@ public class Student extends Person {
     private String collegeName;
     private int year;
 
+    Student(String name, int age, String collegeName) {
+        super(name, age);
+        this.collegeName = collegeName;
+
+    }
+
     public String getCollegeName() {
         return collegeName;
     }
@@ -40,4 +45,10 @@ public class Student extends Person {
         this.year = year;
     }
 
+    @Override
+    public String toString() {
+
+        return String.format("Name %s, Age %d, College Name Name %s, Year %d", super.getName(),
+                getAge(), getCollegeName(), getYear(), getYear());
+    }
 }

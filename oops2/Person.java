@@ -5,6 +5,19 @@ public class Person {
     private int age;
     private String phoneNumber;
 
+    Person(String name, int age) {
+        super();
+        /*
+         * first line of constructor is call to parent constructor
+         * if default constuctor without args is not defined in parent / super class
+         * then we explicity need to class parent constuctor by passing required no of
+         * arg
+         */
+        this.name = name;
+        this.age = age;
+
+    }
+
     public String getName() {
         return name;
     }
@@ -21,9 +34,9 @@ public class Person {
         return phoneNumber;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    // public void setName(String name) {
+    // this.name = name;
+    // }
 
     public void setEmail(String email) {
         this.email = email;
