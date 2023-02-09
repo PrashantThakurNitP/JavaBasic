@@ -13,6 +13,9 @@ abstract class AbstractAnimal {
      * 
      * we cannot created instance of abstarct class
      * 
+     * we need abstarct class when we want that all steps need to be followed in
+     * child class
+     * 
      */
 
 }
