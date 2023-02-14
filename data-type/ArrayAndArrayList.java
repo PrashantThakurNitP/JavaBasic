@@ -1,6 +1,12 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+
+class Person {
+    String name;
+}
 
 public class ArrayAndArrayList {
     /*
@@ -69,6 +75,82 @@ public class ArrayAndArrayList {
         // we specify precision and ronding mode to avoid overfow in case of non
         // terminating decimal
         System.out.print(avg); // print donot add new line
+
+        // inline -> replace all usage of variable with actual value of it
+        /*
+         * int [] marks ={78,45,23};
+         * 
+         * Student student = new Student("abc",marks)
+         * 
+         * changing to inline for array
+         * 
+         * Student student = new Student("abc",new int [] {78,45,23});
+         * 
+         * //variable arguments introduced from java 5
+         * variable argumnet should be last argument
+         * 
+         */
+        print(1);
+        print(2, 3, 4, 5);
+
+        System.out.println(sum(2, 4, 5));
+        System.out.println(sum(45));
+
+        Person[] person = new Person[5]; // create array with al value null
+        person[1] = new Person();
+        System.out.println("person array" + person);
+
+        String[] textValues = { "Apple", "Ball" };
+        System.out.println("String array" + Arrays.toString(textValues));
+        /*------------------------------------------------------------
+         * ArrayList (part of collections)
+         * ----------------------------------------------------------------
+         * 
+         * size of array cannot be increased/decreased dynamicaly
+         * 
+         * ArrayList provide feature to add and remove elements
+         */
+        /*
+         * ArrayList arrayList = new ArrayList(); // it throw warning as unchecked typw
+         * but it aow to add all type but it
+         * // is not good practise
+         * arrayList.add("apple");
+         * arrayList.add("cat");
+         * arrayList.remove("apple");
+         */
+
+        ArrayList<String> arrayList1 = new ArrayList<String>(); // specify type
+        arrayList1.add("apple");
+        arrayList1.add("cat");
+        arrayList1.remove("apple");
+        System.out.println("size of array list" + arrayList1.size());// size of array ist
+
+        ArrayList<Integer> marks1 = new ArrayList<Integer>(); // specify type
+        marks1.add(99);
+        marks1.add(71);
+        marks1.add(81);
+        marks1.add(75);
+        marks1.add(79);
+        marks1.remove(0);// in case of intger it consider argument in remove as index but in string it
+                         // consider as value to remove
+        System.out.println(marks1); // print array
+        System.out.println("size of array list " + marks1.size());// size of array list
+        System.out.println("max of array list " + Collections.max(marks1));// size of array list
+        System.out.println("min of array list " + Collections.min(marks1));// size of array list
+
+    }
+
+    public static void print(int... values) {// variable agument values will be an array
+        System.out.println(Arrays.toString(values));
+
+    }
+
+    public static int sum(int... values) {// variable agument values will be an array
+        // System.out.println(Arrays.toString(values));
+        int sum = 0;
+        for (int value : values)
+            sum += value;
+        return sum;
 
     }
 
