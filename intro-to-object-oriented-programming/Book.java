@@ -40,7 +40,7 @@ public class Book {
     }
 
     public String toString() {
-        return String.format("id = %d, BookName = %s, Autor= %s, Reviews = [%s]", id, bookName, author, reviews);
+        return String.format("id = %d, BookName = %s, Autor = %s, Reviews = [%s]", id, bookName, author, reviews);
     }
 
 }
