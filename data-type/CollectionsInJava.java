@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -132,6 +134,27 @@ public class CollectionsInJava {
 
             // iterator is recommended when we want to modification in mid
         }
+
+        // in list cannot store primitive
+
+        // indexOf() is not overoaded but remove() is overoaded
+
+        // there are to remove method one receiving object and other index
+
+        List<Integer> num = List.of(101, 200, 300, 400);
+        List<Integer> number = new ArrayList<>(num);
+        // in remove pass int -> remove at index like
+        number.remove(2);
+        // in remove pass object -> remove value
+        number.remove(Integer.valueOf(101));
+        System.out.println("After Remove" + number);
+        number.add(56);
+        number.add(12);
+        number.add(2);
+
+        // sort
+        // without comparator
+        Collections.sort(number); // sort is static method present in colection
 
     }
 }
